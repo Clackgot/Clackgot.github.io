@@ -12,7 +12,11 @@
 data-action="share/whatsapp/share">WhatsApp2</a>
 
 <script>
-window.open("whatsapp://send?phone=79995396765");
+var win = window.open("", params)
+//делаем красивости в win.document или втыкаем адрес открываем не пустую ссылку, а заранее заготовленную на сервере заглушку
+$.get("whatsapp://send?phone=79995396765").done(function(res){
+    win.document.location = res;
+});
 </script>
 </body>
 </html>
