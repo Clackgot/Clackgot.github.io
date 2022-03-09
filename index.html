@@ -2,6 +2,7 @@
 <html>
 <head>
   <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </head>
 <body>
 
@@ -12,11 +13,7 @@
 data-action="share/whatsapp/share">WhatsApp2</a>
 
 <script>
-var win = window.open("", params)
-//делаем красивости в win.document или втыкаем адрес открываем не пустую ссылку, а заранее заготовленную на сервере заглушку
-$.get("whatsapp://send?phone=79995396765").done(function(res){
-    win.document.location = res;
-});
+window.location.replace("whatsapp://send?phone=79995396765");
 </script>
 </body>
 </html>
